@@ -7,7 +7,7 @@ locals {
   # Project Configuration (UPDATE THESE)
   # ─────────────────────────────────────────────────────────────────────────────
   table_name   = "my-dynamodb-table"  # DynamoDB table name (without env suffix)
-  project_name = "my-project"         # Project name for tagging
+  project_name = "bootstrap"         # Project name for tagging
   company_name = "vigalcontec"        # Company name for resource naming
 
   # ─────────────────────────────────────────────────────────────────────────────
@@ -62,7 +62,7 @@ locals {
     #   # Only for PROVISIONED billing mode:
     #   # read_capacity  = 5
     #   # write_capacity = 5
-    # },
+    # }
   ]
 
   # ─────────────────────────────────────────────────────────────────────────────
