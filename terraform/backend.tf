@@ -7,10 +7,10 @@
 terraform {
   backend "s3" {
     # These values are provided via -backend-config in CI/CD:
-    - bucket  = "tfstate-{company}-{env}-{account}"
-    - key     = "dynamodb/{table_name}/terraform.tfstate"
-    - region  = "eu-west-1"
-    - encrypt = true
+    #- bucket  = "tfstate-{company}-{env}-{account}"
+    #- key     = "dynamodb/{table_name}/terraform.tfstate"
+    #- region  = "eu-west-1"
+    #- encrypt = true
     
     # For local development, create backend_override.tf with:
     # terraform {
