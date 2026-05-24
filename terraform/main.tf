@@ -95,7 +95,7 @@ resource "aws_dynamodb_table" "main" {
   }
 
   lifecycle {
-    prevent_destroy = false  # Set to true in production
+    prevent_destroy = false # Set to true in production
   }
 }
 
