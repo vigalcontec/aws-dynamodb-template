@@ -100,10 +100,6 @@ jobs:
         run: terraform fmt -check -recursive
         working-directory: ./terraform
 
-      - name: Terraform Validate
-        run: terraform init -backend=false && terraform validate
-        working-directory: ./terraform
-
       - name: Check for sensitive data
         run: |
           echo "🔍 Scanning for sensitive data..."
@@ -116,6 +112,10 @@ jobs:
             exit 1
           fi
           echo "✅ No sensitive data found"
+
+      - name: Terraform Validate
+        run: terraform init -backend=false && terraform validate
+        working-directory: ./terraform
 
   # ─────────────────────────────────────────────────────────────────────────────
   # Security Scan (Checkov)
